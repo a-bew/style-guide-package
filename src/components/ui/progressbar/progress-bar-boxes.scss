@@ -1,0 +1,75 @@
+.progress-bar-boxes-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    flex-direction: column;
+  }
+  
+  .progress-bar-boxes {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .progress-bar-boxes-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+//   .progress-step-box {
+//     width: 30px;
+//     height: 30px;
+//     border: 1px solid #ccc;
+//     background-color: #fff;
+//   }
+  
+  .progress-step-box.completed-box {
+    background-color: #4CAF50;
+  }
+  
+  .progress-line {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: #4CAF50;
+  }
+  
+
+  .progress-step-box  {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    // display: inline-block;
+    position: relative;
+    background: #ddd;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .animated-fill {
+    animation: fill 0.5s ease-in-out;
+    background-color: blue;
+  }
+  
+  @keyframes fill {
+    from {
+      border-radius: 50%;
+      width: 0%;
+    }
+    to {
+      border-radius: 0%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  

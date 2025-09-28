@@ -1,0 +1,41 @@
+
+.loading_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading_btn {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.9;
+    
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+  
+  // Update your existing .btn class if needed
+  .btn {
+    height: 45px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

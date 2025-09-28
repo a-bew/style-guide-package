@@ -1,0 +1,245 @@
+@import '@/globalStyles/index.global.scss';
+
+.box{
+  position: relative;
+  height: 100%;
+  padding-bottom:rem(100);
+  margin-bottom:rem(100);
+}
+    
+.cancelIcon{
+    margin-right: rem(20); 
+    margin-top:rem(15);
+    cursor: pointer;
+}
+
+.overflow-main{
+    height:calc(100vh - 30%);
+    padding-bottom: 20%;
+    overflow:auto;
+}
+
+@media screen and (max-width: rem(600)) {
+  .overflow-main{
+    height:calc(100vh - 28%);
+    padding-bottom: 20%;
+    overflow:auto;
+  }
+}
+
+@media screen and (max-width: rem(400)) {
+  .overflow-main{
+    height:calc(100vh - 33%);
+    padding-bottom: 50%;
+    overflow:auto;
+  }
+}
+
+.box-vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-horizontal{
+    display: flex;
+    flex-direction: row;
+    padding: rem(15);
+}
+
+.space-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+.button{
+    margin: 0.5rem 1rem 1.2rem 1rem;
+}
+
+.horizontal-line{
+    border: rem(0.5) solid #dadce0;
+}
+
+.h2{
+    font-size: $h7;
+}
+
+
+.col{
+    flex:1;
+}
+
+.flex-row{
+  display: flex;
+}
+// Style Button
+
+.buttonStyle {
+  height: rem(43);
+  width: rem(90);
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: $nav-dropdown-font-size;
+  cursor: pointer;    
+}
+
+.buttonFont{
+  font-size: $h7;
+}
+
+button{
+  cursor: pointer;
+  background: none;
+}
+
+.box .footer{
+    padding-bottom: rem(15);
+    position: absolute;
+    bottom: rem(130);
+    width: 100%;
+    background: white
+}
+
+// Style Checkbox
+
+.checkbox .container {
+    font-family: $font-body;
+
+    display: block;
+    position: relative;
+    padding-left: rem(35);
+    margin-bottom: rem(12);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+.checkbox  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+.checkbox  .checkmark {
+    position: absolute;
+    left: 0;
+    height: rem(17);
+    width: rem(17);
+    background-color: #eee;
+    border: rem(1) solid #000000;
+  }
+  
+  /* On mouse-over, add a grey background color */
+.checkbox  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a color-primary background */
+.checkbox  .container input:checked ~ .checkmark {
+    background-color: var(--background); //$color-primary;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkbox  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+.checkbox  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+.checkbox  .container .checkmark:after {
+    left: rem(9);
+    top: rem(5);
+    width: rem(5);
+    height: rem(10);
+    border: solid white;
+    border-width: 0 rem(3) rem(3) 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+//   Radio Button
+.radiobutton .container {
+    font-family: $font-body;
+    display: block;
+    position: relative;
+    padding-left: rem(35);
+    padding-top: rem(5);
+
+    margin-bottom: rem(12);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radiobutton .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .radiobutton .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: rem(25);
+    width: rem(25);
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radiobutton .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a color-primary background */
+  .radiobutton .container input:checked ~ .checkmark {
+    background-color: var(--background);//$color-primary;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radiobutton .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radiobutton .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radiobutton .container .checkmark:after {
+    top: rem(9);
+    left: rem(9);
+    width: rem(8);
+    height: rem(8);
+    border-radius: 50%;
+    background: white;
+  }
+
+
+  .textBold-16{
+    font-weight: '600';
+  }

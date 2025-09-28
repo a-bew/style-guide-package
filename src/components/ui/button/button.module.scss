@@ -1,0 +1,62 @@
+@import '@/styles/helpers';
+
+.copy-url-button {
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  // font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  max-height: 2.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-text {
+  white-space: nowrap;
+  color: white;
+}
+
+// Size variants using rem for responsive design
+.button-sm {
+  padding: 0.375rem 0.625rem;
+  // font-size: 0.75rem;
+}
+
+.button-md {
+  padding: 0.7rem 0.875rem;
+  // font-size: 0.875rem;
+}
+
+.button-lg {
+  padding: 0.625rem 1rem;
+  // font-size: 1rem;
+}
+
+// // Responsive adjustments
+// @media (max-width: 768px) {
+//   .button-sm {
+//     padding: 0.25rem 0.5rem;
+//     font-size: 0.625rem;
+//   }
+
+//   .button-md {
+//     padding: 0.375rem 0.75rem;
+//     font-size: 0.75rem;
+//   }
+
+//   .button-lg {
+//     padding: 0.5rem 0.875rem;
+//     font-size: 0.875rem;
+//   }
+// }

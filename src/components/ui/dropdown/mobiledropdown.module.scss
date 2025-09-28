@@ -1,0 +1,253 @@
+@import '@/styles/helpers';
+
+/*
+* input style
+*/
+
+
+/*
+* custom select style
+*/
+
+.dropdown-container {
+    // position: relative;
+    /* to position the dropdown items absolute */
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    //    max-width: 130px;
+    //    min-width: 130px;
+    max-width: 100%;
+
+    //        margin: 100px;
+
+
+}
+
+.dropdown-items {
+    /* styles for the dropdown items container */
+    position: absolute;
+    //top: 10px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    // border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    // z-index: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.dropdown-item {
+    /* general styles for all items */
+    //  padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item.selected,
+.dropdown-item:hover {
+    /* styles for the selected item */
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.dropdown-container .dropdown-items {
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+
+}
+
+.dropdown-container .dropdown-items.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    //gap: 5px;
+    max-height: 55vh;
+    //min-height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    z-index: 250;
+    padding: 10px;
+    padding-top: 0;
+
+    @media screen and (max-width: 768px) {
+        max-height: 85vh;
+    }
+
+}
+
+.dropdown-container:has(.dropdown-input:focus) {
+
+
+    span.up-down-icon {
+        z-index: 105;
+    }
+}
+
+.dropdown-container input.isfocus {
+    //z-index: 101;
+    // border: 1px solid #ccc;
+
+    // border-bottom: 0.3px solid #fff;
+    border-radius: 4px 4px 0 0;
+    // margin: auto;
+}
+
+// form input
+
+.form_control {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    //border: 1px solid #ced4da;
+    // border: 0.5px solid #C4C4C4;
+    // border: 0.5px solid #C4C4C4;
+
+    border-radius: 0.375rem;
+    // height: 30px;
+    font-family: $font-body;
+    letter-spacing: 0.1rem;
+
+    //    border: 0.5px solid #000000;
+    border-radius: 3px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+input.form_control:not(:placeholder-shown):focus {
+    border: none;
+}
+
+.dropdown-container input.form_control {
+    // text-decoration:;
+}
+
+input.form_control:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-small-caret-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.input-clickable {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-label-items {
+    //    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+
+    // Mobile
+    touch-action: pan-y; // to allow vertical scrolling touch gestures.
+    -webkit-overflow-scrolling: touch; // to enable momentum based scrolling on iOS.
+
+    // Desktop
+    -ms-overflow-style: none;
+    overscroll-behavior-y: contain; // to prevent the scroll position from skipping around.
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ddd;
+}
+
+//.message-label-items:hover {
+//    overflow-y: scroll;
+//}
+
+.message-label-items {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Hide the scrollbar */
+}
+
+
+.message-label-items:active::-webkit-scrollbar-thumb,
+.message-label-items:focus::-webkit-scrollbar-thumb,
+.message-label-items:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.message-label-items::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    visibility: hidden;
+}
+
+.message-label-items::-webkit-scrollbar {
+    width: 15px;
+    height: 4px;
+}
+
+.message-label-items.hide-bar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.scrollable-message-list {
+    padding-right: 2px;
+    overflow-y: hidden;
+    /* Hide the scrollbar */
+    border-right: $thin-line-color solid 1px;
+    border-bottom: white solid 1px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    /* Add animation to the flex property */
+
+    width: 100%;
+    margin: 0 auto;
+    // position: fixed;
+    // bottom: 0;
+    height: calc(100% - 55px);
+
+}
+
+.label {
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 10px 10px 0px;
+    text-align: left;
+    align-self: flex-start;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+
+}
+
+
+.backArrrowIcon {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-right: -10px;
+    display: block;
+    left: 5px;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    z-index: 1000;
+    background: white;
+    width: 100%;
+    padding: 10px;
+}

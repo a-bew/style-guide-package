@@ -1,0 +1,83 @@
+@import '@/globalStyles/vars';
+@import '@/globalStyles/colors';
+@import '@/globalStyles/typography';
+@import '@/globalStyles/index.global.scss';
+
+.section {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $gray-200;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle {
+  @extend %heading-1;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionDescription {
+  @extend %body1-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.comingSoon {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    @extend %heading-3;
+    color: $gray-800;
+    margin: 0 0 1rem 0;
+  }
+
+  p {
+    @extend %body1-r;
+    color: $gray-600;
+    margin: 0 0 1.5rem 0;
+  }
+
+  ul {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    li {
+      @extend %body2-r;
+      color: $gray-700;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid $gray-100;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        content: "→ ";
+        color: $primary-10;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .section {
+    padding: 1rem;
+  }
+
+  .comingSoon {
+    padding: 1.5rem;
+  }
+}

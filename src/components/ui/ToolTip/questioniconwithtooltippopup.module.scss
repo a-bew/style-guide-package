@@ -1,0 +1,89 @@
+@import '@/globalStyles/index.global.scss';
+
+/**
+* Tooltip style
+*/
+
+.question-icon-with-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.question-icon-with-tooltip .tooltip-icon {
+  cursor: help;
+  color: #007bff;
+}
+
+
+.tooltip-popup.moveToTop {
+  left: 50%;
+  transform: translateX(-50%);
+
+  &:after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 10px 0 !important;
+    border-style: solid;    
+  }
+
+}
+
+.tooltip-popup.normal {
+ left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+
+  &:after {
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+.tooltip-popup {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  position: absolute;
+  z-index: 100000;
+  top: 100%;
+  display: none;
+  min-width: 200px;
+  text-align: center;
+
+  /*
+  * Creates triangle
+  * - acting on the top edge of 
+  * - onboarding__navbar_menu_container selector
+  * - as pointer to the sibling element 
+  * - svg(.tooltip-icon) icon
+  * - parent selector is onboarding__navbar_menu
+  */
+  
+  &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      // top: -15px;
+      // left: 55%;
+      // transform: translateX(-55%);
+      width: 0;
+      border-width: 0 10px 15px !important;
+      border-style: solid;
+      border-color: $footer-bg transparent;
+  }
+
+}
+
+.question-icon-with-tooltip.q:has(.tooltip-icon:hover) {
+  .tooltip-popup{
+    display: block;
+  }
+}
+
+.text-align-hyphen {
+  text-align: center;
+  text-align-last: center;
+  hyphens: auto;
+}

@@ -1,0 +1,393 @@
+@import '@/globalStyles/vars';
+@import '@/globalStyles/colors';
+@import '@/globalStyles/typography';
+@import '@/globalStyles/index.global.scss';
+
+.navigationSection {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $gray-200;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle {
+  @extend %heading-1;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionDescription {
+  @extend %body1-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.componentsGrid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.componentCard {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.componentHeader {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid $gray-100;
+}
+
+.componentTitle {
+  @extend %heading-3;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.componentDescription {
+  @extend %body2-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.componentDemo {
+  padding: 2rem 1.5rem;
+  background: $gray-100;
+  min-height: 120px;
+}
+
+.demoGroup {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.demoTitle {
+  @extend %body2-sb;
+  color: $gray-700;
+  margin: 0 0 1rem 0;
+}
+
+// Tab Components
+.tabContainer, .miniTabContainer {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid $gray-200;
+}
+
+.tabList, .miniTabList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.tabItemContainer {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid $gray-200;
+}
+
+.paginatedContainer {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid $gray-200;
+}
+
+// Progress Bar
+.progressContainer {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid $gray-200;
+}
+
+.progressControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.progressButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid $primary-10;
+  background: white;
+  color: $primary-10;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: $primary-10;
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: $gray-300;
+    color: $gray-500;
+  }
+}
+
+.stepInfo {
+  @extend %body2-sb;
+  color: $gray-700;
+  text-align: center;
+  min-width: 200px;
+}
+
+// Banner
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+// Bottom Sheet
+.bottomSheetDemo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.openSheetButton {
+  padding: 0.75rem 1.5rem;
+  background: $primary-10;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: darken($primary-10, 10%);
+  }
+}
+
+.sheetContent {
+  padding: 2rem;
+  text-align: center;
+
+  h3 {
+    @extend %heading-3;
+    color: $gray-900;
+    margin: 0 0 1rem 0;
+  }
+
+  p {
+    @extend %body1-r;
+    color: $gray-600;
+    margin: 0 0 1rem 0;
+  }
+
+  ul {
+    text-align: left;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+
+    li {
+      @extend %body2-r;
+      color: $gray-700;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.closeSheetButton {
+  padding: 0.5rem 1rem;
+  background: $gray-200;
+  color: $gray-800;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background: $gray-300;
+  }
+}
+
+// Navigation Combinations
+.combinationsDemo {
+  display: grid;
+  gap: 2rem;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.navExample {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+
+  h6 {
+    @extend %body2-sb;
+    color: $gray-800;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.miniProgressBar {
+  height: 4px;
+  background: $gray-200;
+  border-radius: 2px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.progressIndicator {
+  height: 100%;
+  background: $primary-10;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.componentCode {
+  border-top: 1px solid $gray-200;
+  background: $gray-100;
+}
+
+.codeToggle {
+  @extend %body2-sb;
+  color: $gray-700;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-10;
+  }
+
+  &::marker {
+    color: $primary-10;
+  }
+}
+
+.codeBlock {
+  background: $gray-900;
+  color: $gray-100;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-top: 1px solid $gray-200;
+
+  code {
+    color: inherit;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// Usage Guidelines
+.usageGuidelines {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.guidelinesTitle {
+  @extend %heading-3;
+  color: $gray-900;
+  margin: 0 0 1.5rem 0;
+}
+
+.guidelinesList {
+  display: grid;
+  gap: 1.5rem;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.guideline {
+  padding: 1rem;
+  border-left: 3px solid $primary-10;
+  background: rgba($primary-10, 0.05);
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  h4 {
+    @extend %secondary-heading;
+    color: $gray-900;
+    margin: 0 0 0.5rem 0;
+  }
+
+  p {
+    @extend %body2-r;
+    color: $gray-600;
+    margin: 0;
+  }
+}
+
+// Responsive Design
+@media (max-width: $tablet) {
+  .navigationSection {
+    padding: 1rem;
+  }
+  
+  .componentDemo {
+    padding: 1.5rem 1rem;
+  }
+  
+  .combinationsDemo {
+    grid-template-columns: 1fr;
+  }
+  
+  .progressControls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .stepInfo {
+    min-width: auto;
+  }
+  
+  .codeBlock {
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .usageGuidelines {
+    padding: 1.5rem;
+  }
+  
+  .guidelinesList {
+    grid-template-columns: 1fr;
+  }
+}

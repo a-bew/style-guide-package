@@ -1,0 +1,120 @@
+@import '@/styles/helpers';
+
+/*
+* input style small
+*/
+
+
+/*
+* custom select style
+*/
+
+.dropdown-container {
+    position: relative;
+    /* to position the dropdown items absolute */
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    //    max-width: 130px;
+    //    min-width: 130px;
+    max-width: 100%;
+}
+
+.dropdown-items {
+    /* styles for the dropdown items container */
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    // z-index: 1;
+}
+
+.dropdown-item {
+    /* general styles for all items */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item.selected,
+.dropdown-item:hover {
+    /* styles for the selected item */
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.dropdown-container .dropdown-items {
+    padding: 10;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+.dropdown-container .dropdown-items.show {
+    padding: 35px 8px 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    //gap: 5px;
+    max-height: 55vh;
+    //min-height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    z-index: 100;
+}
+
+.dropdown-container:has(.dropdown-input:focus){
+    z-index: 105;
+
+    span.up-down-icon{
+        z-index: 105;
+    }       
+}
+
+.dropdown-container input.isfocus{
+    z-index: 101;
+    border: 1px solid #ccc;
+    border-bottom: 0.3px solid #fff;
+    border-radius: 4px 4px 0 0;
+    margin: auto;
+}
+
+// form input
+
+.form_control {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    //border: 1px solid #ced4da;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 0.375rem;
+    // height: 30px;
+    font-family: $font-body;
+    letter-spacing: 0.1rem; 
+
+//    border: 0.5px solid #000000;
+    border-radius: 3px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 0.375rem 0.75rem;
+    padding: 10px;
+}
+  
+input.form_control:hover{
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.1);
+}
+
+.dropdown-small-caret-icon{
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}

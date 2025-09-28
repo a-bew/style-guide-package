@@ -1,0 +1,65 @@
+@import '@/styles/helpers';
+
+
+.checkmark-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .checkmark {
+    width: 150px;
+    height: 150px;
+    animation: checkmarkAnimation 0.5s ease forwards;
+  }
+  
+  .checkmark-circle {
+    stroke: $color-primary;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    fill: none;
+    animation: circleAnimation 0.3s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .checkmark-check {
+    stroke: $color-primary;
+    stroke-width: 2;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: checkAnimation 0.3s ease-in-out forwards;
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes checkmarkAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes circleAnimation {
+    0% {
+      stroke-dasharray: 0 150;
+    }
+    100% {
+      stroke-dasharray: 150 150;
+    }
+  }
+  
+  @keyframes checkAnimation {
+    0% {
+      stroke-dashoffset: 30;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  

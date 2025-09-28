@@ -1,0 +1,119 @@
+@import '@/globalStyles/index.global.scss';
+
+.side-drawer {
+   background: white;
+   position: fixed;
+   right: 0;
+   width: rem(500);
+   height: 100%;
+   transform: translateX(100%);
+   transition: transform 0.3s ease-out;
+   padding: 0;
+   margin: 0;
+   overflow-y: hidden;
+}
+
+.side-drawer.open {
+   transform: translateX(0);
+   box-shadow: rem(1) rem(0) rem(0) rgba(0, 0, 0, 0.5);
+}
+
+// Side Down
+.side-down {
+   background: white;
+   position: fixed;
+   right: 0;
+   width: rem(500);
+   height: 100%;
+   transform: translateY(-100%);
+   transition: transform 0.3s ease-out;
+   padding: 0;
+   margin: 0;
+   overflow-y: hidden;
+}
+
+.side-down.open {
+   transform: translateY(0);
+   box-shadow: rem(1) rem(0) rem(0) rgba(0, 0, 0, 0.5);
+}
+
+// Side Up
+.side-up {
+   background: white;
+   position: fixed;
+   right: 0;
+   // position:relative;
+   width: rem(500);
+   height: 100%;
+   transform: translateY(150%);
+   transition: transform 0.3s ease-out;
+   padding: 0;
+   margin: 0;
+   // display: none;
+   overflow-y: hidden;
+   z-index: 9999;
+  touch-action: none; // Prevent browser default scrolling gestures
+  overscroll-behavior: contain; // Prevent pull-to-refresh on iOS/Android
+}
+
+.side-up.open {
+   transform: translateY(0);
+   box-shadow: rem(1) rem(0) rem(0) rgba(0, 0, 0, 0.5);
+}
+
+.side-left {
+   background: white;
+   position: fixed;
+   left: -100%; /* Start off-screen */
+   width: fit-content;
+   height: 100%;
+   transition: left 0.3s ease-out;
+   padding: 0;
+   margin: 0;
+   z-index: 9999;
+   // overflow-y: hidden;
+   top: 0;
+   height: 100vh;
+   background-color: rgba(255,255,255,0.9); 
+
+ }
+
+ .side-left.open {
+   left: 0; /* Slide into view */
+  //  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 0 rem(10) #0000004d; 
+
+ }
+
+ .side-right {
+   background: white;
+   position: fixed;
+   right: -100%; /* Start off-screen */
+   width: fit-content;
+   height: 100%;
+   transition: right 0.3s ease-out;
+   padding: 0;
+   margin: 0;
+   z-index: 9999;
+   // overflow-y: hidden;
+   top: 0;
+   height: 100vh;
+   background-color: rgba(255,255,255,0.9); 
+ }
+
+ .side-right.open {
+   right: 0; /* Slide into view */
+   box-shadow: 0 0 rem(10) rgba(0,0,0,0.3); 
+ }
+
+@media screen and (max-width: rem(600)) {
+
+   .side-drawer,
+   .side-down,
+   .side-up,
+   .side-left,
+   .side-right {
+      width: 100%;
+   }
+   
+}

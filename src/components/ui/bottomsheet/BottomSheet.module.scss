@@ -1,0 +1,33 @@
+/* BottomSheet.css */
+
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  transform: translateY(150%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 15px;
+
+}
+
+.open {
+  background-color: #f4f4f4;
+  transform: translateY(0);
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+$unit:'%';
+
+// Loop through numbers 1 to 100
+@for $i from 1 through 100 {
+  // Define a class for each number
+  .height-#{$i} {
+    height: #{$i}#{$unit}; // This should correctly compile to CSS
+  }
+}

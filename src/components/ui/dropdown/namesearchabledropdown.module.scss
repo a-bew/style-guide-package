@@ -1,0 +1,169 @@
+@import '@/globalStyles/index.global.scss';
+
+.dropdown-container {
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.dropdown-items {
+    /* styles for the dropdown items container */
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: rem(1) solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-item.selected,
+.dropdown-item:hover {
+    /* styles for the selected item */
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.dropdown-container .dropdown-items {
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+.dropdown-container .dropdown-items.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 40vh;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    z-index: 250;
+    padding: rem(10) 0 0 0;
+    padding-top: 0;
+    box-shadow: 0 rem(4) rem(6) rgba(0, 0, 0, 0.1), 
+    0 rem(1) rem(3) rgba(0, 0, 0, 0.08);
+
+    @media screen and (max-width: rem(768)) {
+        max-height: 100vh;
+    }
+}
+
+.dropdown-container:has(.dropdown-input:focus) {
+    span.up-down-icon {
+        z-index: 105;
+    }
+}
+
+.dropdown-container input.isfocus {
+    border: rem(1) solid #ccc;
+    border-bottom: rem(0.3) solid #fff;
+    border-radius: rem(4) rem(4) 0;
+}
+
+// form input
+.form_control {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: rem(1) solid #C4C4C4;
+    font-family: $font-body;
+    letter-spacing: 0.1rem;
+    border-radius: rem(3);
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: rem(10);
+
+
+}
+
+.dropdown-container input.form_control {
+    text-decoration: none;
+}
+
+.dropdown-small-caret-icon {
+    width: rem(20);
+    height: rem(20);
+    cursor: pointer;
+}
+
+.input-clickable {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: rem(1) solid transparent;
+}
+
+.message-label-items {
+    width: 100%;
+    height: 100%;
+
+    // Mobile
+    touch-action: pan-y; // to allow vertical scrolling touch gestures.
+    -webkit-overflow-scrolling: touch; // to enable momentum based scrolling on iOS.
+
+    // Desktop
+    -ms-overflow-style: none;
+    overscroll-behavior-y: contain; // to prevent the scroll position from skipping around.
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ddd;
+}
+
+.message-label-items {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Hide the scrollbar */
+}
+
+.message-label-items:active::-webkit-scrollbar-thumb,
+.message-label-items:focus::-webkit-scrollbar-thumb,
+.message-label-items:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.message-label-items::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    visibility: hidden;
+}
+
+.message-label-items::-webkit-scrollbar {
+    width: rem(15);
+    height: rem(4);
+}
+
+.message-label-items.hide-bar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollable-message-list {
+    padding-right: rem(2);
+    overflow-y: hidden;
+    /* Hide the scrollbar */
+    border-right: $thin-line-color solid rem(1);
+    border-bottom: white solid rem(1);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    /* Add animation to the flex property */
+
+    width: 100%;
+    margin: 0 auto;
+    height: calc(100% - rem(55));
+}

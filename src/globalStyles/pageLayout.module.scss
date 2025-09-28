@@ -1,0 +1,30 @@
+@import '@/globalStyles/index.global.scss';
+  
+  header {
+    flex: 0 0 100%; /* Let it fill the entire space horizontally */
+    min-height: rem(70);
+    // background-color: silver;
+  }
+
+  main{
+    flex: 0 0 100%; /* Let it fill the entire space horizontally */
+    min-height: calc(100vh - rem(70) - rem(125)); /* excluding the height of the header */
+    // background-color: white;
+  }
+
+  footer{
+    flex: 0 0 100%; /* Let it fill the entire space horizontally */
+    min-height: rem(125);
+    background-color: $footer-bg;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media screen and (max-height: rem(600)) {
+    footer.no-search{
+      position: absolute;
+      top: calc(100vh);
+
+  }
+}

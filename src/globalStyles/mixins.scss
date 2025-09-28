@@ -1,0 +1,39 @@
+@mixin svgFill($color, $size: false) {
+    svg {
+      @if $size {
+        width: $size;
+        height: $size;
+      }
+  
+      path {
+        transition: all 0.5s;
+        fill: $color;
+        @content;
+      }
+    }
+  }
+
+  @mixin scrollbar($width) {
+    &::-webkit-scrollbar {
+      width: $width;
+      @content;
+  
+      @media (min-height: 940px) {
+        width: 0;
+      }
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 2px;
+      background-color: $secondary-1100;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background-color: $primary-200;
+  
+      &:hover {
+        background-color: $primary-1200;
+      }
+    }
+  }

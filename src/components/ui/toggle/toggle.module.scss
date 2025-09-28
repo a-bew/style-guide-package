@@ -1,0 +1,106 @@
+.inputWrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-checkbox {
+    position: absolute;
+    left: -99999px;
+    top: -9999px
+}
+
+.input-checkbox:checked+span {
+    // background-color: #A14807;
+    justify-content: flex-start;
+    padding-left: 18%;
+}
+
+.input-checkbox:checked+span::before {
+    left: 50%;
+    content: "Patronize";
+}
+//
+.slider {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    // width: 50px;
+    // height: 25px;
+    border-radius: 100px;
+    background-color: #bfbfbf;
+
+    // width: 338px;
+    width: 90%;
+    // z-index: -1;
+    height: 39px;
+    // left: 170px;
+    // top: 909px;
+
+    background: #FFFFFF;
+    box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 7px;
+
+    position: relative;
+    transition: background-color 0.2s;
+    justify-content: flex-end;
+    align-items: center;
+    // padding-right: 3rem;
+    padding-right: 12%;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+// 
+.slider::before {
+    content: "About";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 21px;
+    border-radius: 45px;
+    transition: 0.2s;
+    // background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 35, 11, $alpha: 0.2);
+    width: 49.3%;
+
+    // width: 162px;
+    height: 34px;
+    // left: 174px;
+    // top: 912px;
+
+    background:  var(--background);  // #A14807
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    // font-size: 7px;
+
+}
+
+@media screen and (min-width: 821px) {
+
+    .inputWrapper {
+        width: 100%;
+    }
+
+    .slider {
+        width: 90%;
+        // width: 300px;
+        // padding-right: 12%;
+        // font-weight: 600;
+
+    }
+
+    .slider::before {
+        width: 49.3%;
+        // width: 140px;
+    }
+
+}

@@ -1,0 +1,136 @@
+@import '@/styles/helpers';
+
+/*
+* input style
+*/
+
+
+/*
+* custom select style
+*/
+
+.dropdown-container {
+    position: relative;
+    /* to position the dropdown items absolute */
+    font-family: $font-body;
+    display: flex;
+    // flex-direction: column;
+    // max-width: 40rem;
+    // min-width: 40rem;
+    border: 1px solid #ced4da;
+    margin: 10px 15px;
+    // border-radius: ;
+}
+
+.dropdown-items {
+    /* styles for the dropdown items container */
+    position: absolute;
+    top: 32px;
+    margin: 0px 20px 0px 20px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.dropdown-item:nth-child(1){
+    margin-top: 10px;
+}
+
+.dropdown-item:last-child{
+    margin-bottom: 10px;
+}
+
+.dropdown-item {
+    /* general styles for all items */
+    // padding: 15px;
+    cursor: pointer;
+}
+
+.dropdown-item.selected,
+.dropdown-item:hover {
+    /* styles for the selected item */
+    background-color: #f5f5f5;
+    width: 100%;
+    //text-align: center;
+}
+
+.dropdown-container .dropdown-items {
+    padding: 10;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+.dropdown-container .dropdown-items.show {
+    // .search_input_div .active .autocom_box{
+    // padding: 50px 8px 10px 8px;
+
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    //gap: 5px;
+    max-height: 55vh;
+    //min-height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    // z-index: 9999;
+    // position: fixed;
+}
+
+.to-text{
+    font-weight: 500; 
+    display: flex; 
+    margin-top: 8px;
+    padding-left: 5px; 
+    color: #aaa; 
+}
+.dropdown-container:has(.dropdown-input:focus){
+    span.up-down-icon{
+        z-index: 105;
+    }
+}
+
+.dropdown-container input.isfocus{
+    z-index: 101;
+    border-radius: 4px 4px 0 0;
+    margin: auto;
+  }
+
+
+.form_control {
+    flex:1;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: 35px;
+    font-family: $font-body;
+    letter-spacing: 0.1rem;   
+    border-radius: 3px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 0.375rem 0.75rem;
+}
+  
+.selected-option {
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    padding: 0px 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

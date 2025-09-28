@@ -1,0 +1,344 @@
+@import '@/globalStyles/vars';
+@import '@/globalStyles/colors';
+@import '@/globalStyles/typography';
+@import '@/globalStyles/index.global.scss';
+
+.designSystem {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $gray-200;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle {
+  @extend %heading-1;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionDescription {
+  @extend %body1-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.subsection {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.subsectionTitle {
+  @extend %heading-3;
+  color: $gray-800;
+  margin: 0 0 1.5rem 0;
+}
+
+.subsectionSubtitle {
+  @extend %heading-4;
+  color: $gray-700;
+  margin: 2rem 0 1rem 0;
+}
+
+// Color Palette Styles
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.colorCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.colorSwatch {
+  width: 60px;
+  height: 60px;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.colorInfo {
+  flex: 1;
+}
+
+.colorName {
+  @extend %secondary-heading;
+  color: $gray-900;
+  margin: 0 0 0.25rem 0;
+}
+
+.colorValue {
+  @extend %body2-sb;
+  color: $gray-600;
+  margin: 0 0 0.25rem 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.colorUsage {
+  @extend %body2-r;
+  color: $gray-500;
+  margin: 0;
+}
+
+// Gray Scale Styles
+.grayScale {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.grayCard {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+}
+
+.graySwatch {
+  width: 100%;
+  height: 60px;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.grayName {
+  @extend %body2-sb;
+  color: $gray-800;
+  margin: 0 0 0.25rem 0;
+}
+
+.grayValue {
+  @extend %micro-r;
+  color: $gray-500;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+// Typography Styles
+.typographyGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.typeCard {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.typeExample {
+  flex: 2;
+  margin-right: 2rem;
+}
+
+.typeInfo {
+  flex: 1;
+}
+
+.typeName {
+  @extend %secondary-heading;
+  color: $gray-900;
+  margin: 0 0 0.25rem 0;
+}
+
+.typeSpecs {
+  @extend %body2-sb;
+  color: $gray-600;
+  margin: 0 0 0.25rem 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.typeUsage {
+  @extend %body2-r;
+  color: $gray-500;
+  margin: 0;
+}
+
+// Typography Classes
+.displayTitleL {
+  @extend %display-title-l;
+  color: $gray-900;
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+.headingMacro {
+  @extend %heading-macro;
+  color: $gray-900;
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.heading1 {
+  @extend %heading-1;
+  color: $gray-900;
+  margin: 0;
+}
+
+.heading2 {
+  @extend %heading-2;
+  color: $gray-900;
+  margin: 0;
+}
+
+.heading3 {
+  @extend %heading-3;
+  color: $gray-900;
+  margin: 0;
+}
+
+.heading4 {
+  @extend %heading-4;
+  color: $gray-900;
+  margin: 0;
+}
+
+.subheadingB {
+  @extend %subheading-b;
+  color: $gray-900;
+  margin: 0;
+}
+
+.body1R {
+  @extend %body1-r;
+  color: $gray-900;
+  margin: 0;
+}
+
+.body2R {
+  @extend %body2-r;
+  color: $gray-900;
+  margin: 0;
+}
+
+.microR {
+  @extend %micro-r;
+  color: $gray-900;
+  margin: 0;
+}
+
+// Breakpoints Styles
+.breakpointsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.breakpointCard {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.breakpointName {
+  @extend %secondary-heading;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.breakpointValue {
+  @extend %subheading-sb;
+  color: $primary-10;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.breakpointUsage {
+  @extend %body2-r;
+  color: $gray-500;
+  margin: 0;
+}
+
+// Spacing Styles
+.spacingDemo {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+}
+
+.spacingDescription {
+  @extend %body1-r;
+  color: $gray-600;
+  margin: 0 0 2rem 0;
+}
+
+.spacingExamples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+.spacingExample {
+  text-align: center;
+}
+
+.spacingBox {
+  background: $primary-10;
+  border-radius: 0.25rem;
+  margin: 0 auto 0.5rem auto;
+}
+
+.spacingLabel {
+  @extend %micro-r;
+  color: $gray-600;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+// Responsive Design
+@media (max-width: $tablet) {
+  .designSystem {
+    padding: 1rem;
+  }
+  
+  .colorGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .typeCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .typeExample {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .spacingExamples {
+    gap: 1rem;
+  }
+}

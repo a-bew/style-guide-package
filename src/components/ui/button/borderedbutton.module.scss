@@ -1,0 +1,60 @@
+@import '@/styles/helpers';
+
+.copy-url-button {
+    // background-color: $footer-bg;
+    // color: $color-primary;
+    // border: $color-primary solid 1px;
+    padding: 8px 12px;
+    // text-align: center;
+    // text-decoration: none;
+    
+    cursor: pointer;
+    border-radius: 4px;
+   // width: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  
+  
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  
+    // flex: none;
+    order: 0;
+    flex-grow: 0;
+    // padding: 10px;
+    background: none;
+    border: 1px solid #A14807;
+  
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background:  var(--background);  // #A14807
+      color: white;
+    }
+  }
+  
+  // button {
+  //   margin-left: 1rem;
+  //   padding: 0.5rem 1rem;
+  //   border: 1px solid #d4af37;
+  //   border-radius: 5px;
+  //   background: none;
+  //   color: #d4af37;
+  //   cursor: pointer;
+  //   transition: background 0.3s;
+
+  //   &:hover {
+  //     background: #d4af37;
+  //     color: white;
+  //   }
+  // }
+@media (max-width: 768px) {  
+    .copy-url-button {
+      font-size: 10px;
+    }
+  }
+  

@@ -1,0 +1,28 @@
+.separator {
+    background-color: var(--border-color, #ddd);
+    flex-shrink: 0;
+  }
+  
+  /* Horizontal Separator */
+  .horizontal {
+    width: 100%;
+    height: 1px;
+  }
+  
+  /* Vertical Separator */
+  .vertical {
+    width: 1px;
+    height: 100%;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .horizontal {
+      height: 2px; /* Slightly thicker on smaller screens */
+    }
+  
+    .vertical {
+      width: 2px;
+    }
+  }
+  

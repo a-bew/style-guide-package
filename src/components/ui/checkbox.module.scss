@@ -1,0 +1,85 @@
+@import '@/styles/helpers';
+
+// Style Checkbox
+
+.checkbox .container {
+    font-family: $font-body;
+    display: flex;
+    align-items: center;
+    // vertical-align: top;
+    position: relative;
+    padding-left: 30px;
+    // margin-bottom: 12px;
+    // padding-top: 5px;
+    cursor: pointer;
+    // font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
+
+  .checkbox .label{
+    margin-bottom: 10px;
+  }
+  
+  /* Hide the browser's default checkbox */
+.checkbox  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    // padding-top: 10px;
+  }
+  
+  /* Create a custom checkbox */
+.checkbox  .checkmark {
+    position: absolute;
+//    top: 5px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border: 1px solid #000000;
+    margin-top: -10px;
+
+  }
+  
+  /* On mouse-over, add a grey background color */
+.checkbox  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a color-primary background */
+.checkbox  .container input:checked ~ .checkmark {
+    background-color: var(--background); //$color-primary;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkbox  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+.checkbox  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+.checkbox  .container .checkmark:after {
+    border: solid white;
+    border-width: 0 0.2em 0.2em 0;
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+    -ms-transform: rotate(45deg) translate(-50%, -50%);
+    // transform: rotate(45deg);
+
+    top: 50%;
+    left: 25%;
+    transform:  rotate(45deg) translate(-50%, -50%);
+    width: 30%; /* Adjust the width of the checkmark */
+    height: 60%; /* Adjust the height of the checkmark */
+  }

@@ -1,0 +1,97 @@
+$primary-font: 'Open Sans', sans-serif;
+$heading-margin: 0;
+$heading-padding: 0;
+$heading-weight: normal;
+
+$h1-size: 2.5rem;
+$h2-size: 2rem;
+$h3-size: 1.75rem;
+$h4-size: 1.5rem;
+$h5-size: 1rem;
+$h6-size: 0.875rem;//0.85rem;
+$h7-size: 0.75rem;
+
+@mixin heading-styles {
+  font-family: $primary-font;
+  margin: $heading-margin;
+  padding: $heading-padding;
+  font-weight: $heading-weight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading-styles;
+}
+
+h1 {
+  font-size: $h1-size;
+}
+
+h2 {
+  font-size: $h2-size;
+}
+
+h3 {
+  font-size: $h3-size;
+}
+
+h4 {
+  font-size: $h4-size;
+}
+
+h5 {
+  font-size: $h5-size;
+}
+
+h6 {
+  font-size: $h6-size;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+  }
+}
+
+
+// For desktop and iPad, you can use media queries to change the font-size of the headings.
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1.25rem;
+    }
+}

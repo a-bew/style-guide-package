@@ -1,0 +1,22 @@
+.label {
+    text-align: left;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.backArrrowIcon {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-right: -10px;
+    display: block;
+    left: 5px;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    z-index: 1000;
+    background: white;
+    width: 100%;
+    padding: 10px;
+}

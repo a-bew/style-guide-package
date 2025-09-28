@@ -1,0 +1,487 @@
+@import '@/globalStyles/index.global.scss';
+
+$label-font-size: rem(12);
+
+// Loop through numbers 1 to 100
+@for $i from 1 through 12 {
+  // Define a class for each number
+  .col-#{$i} {
+    flex: #{$i}; // This should correctly compile to CSS
+  }
+}
+
+
+
+
+.col {
+    flex: 1;
+}
+
+
+// Gap
+
+$pxUnit:'px';
+
+// Loop through numbers 1 to 100
+@for $i from 1 through 100 {
+  // Define a class for each number
+  .gap-#{$i} {
+    gap: #{rem($i)}; // This should correctly compile to CSS
+  }
+}
+
+// example
+.gap {
+    gap: rem(0);
+}
+
+
+
+// Margin
+
+// Loop through numbers 1 to 100
+@for $i from 1 through 100 {
+    // Define a class for each number
+
+    // Margin-top
+    .mt-#{$i} {
+        margin-top: #{rem($i)}; // This should correctly compile to CSS
+    }
+
+    // Margin-left
+    .ml-#{$i} {
+        margin-left: #{rem($i)};
+    }
+
+    // Margin-bottom
+    .mr-#{$i} {
+        margin-right: #{rem($i)};
+    }
+
+    // Margin-bottom
+    .mb-#{$i} {
+        margin-bottom: #{rem($i)};
+    }
+    
+    // Padding Right
+    .pr-#{$i} {
+        padding-right: #{rem($i)};
+    }    
+
+    // Padding Left
+    .pl-#{$i} {
+        padding-left: #{rem($i)};
+    } 
+
+    // Padding Top
+    .pt-#{$i} {
+        padding-top: #{rem($i)};
+    } 
+
+    // Padding Bottom
+    .pb-#{$i} {
+        padding-bottom: #{rem($i)};
+    } 
+}
+
+// Txt bold
+
+// $pxUnit:'px';
+
+// Loop through numbers 1 to 100
+@for $i from 1 through 9 {
+    .text-bold-#{$i * 100} {
+      font-weight: $i * 100;
+    }
+}
+
+
+
+.button {
+    font-family: $font-body;
+    font-weight: 500;
+    border-radius: rem(10);
+    font-size: rem(13);
+    cursor: pointer;
+    background-color: $footer-bg;
+    width: 100%;
+}
+
+.button-search {
+    min-width: rem(120);
+    max-width: rem(120);
+}
+
+.borderBtn {
+    border: rem(1) solid #dadce0;
+}
+
+.shadow_on_hover:hover {
+    box-shadow: rem(0) rem(0) rem(5) rgba(0, 0, 0, 0.1);
+}
+
+// responsive form design
+.responsive_form {
+    margin: auto;
+    width: 40rem;
+}
+
+.responsive_form_general {
+    margin: auto;
+    width: 70%;
+    min-width: 40rem;
+}
+
+.responsive_form_general_60 {
+    margin: auto;
+    width: 60%;
+    min-width: 40rem;
+}
+
+
+.links {
+    color: $color-primary;
+}
+
+.links:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: rem(650)) {
+    .responsive_form {
+        width: 100%;
+        // margin: 0 15px;
+    }
+
+    .responsive_form_general {
+        margin: auto;
+        width: 100%;
+        min-width: 100%;
+
+    }
+
+    .responsive_form_general_60 {
+        margin: auto;
+        width: 1000%;
+        min-width: 100%;
+    }
+
+}
+
+// responsive form design
+.responsive_formm {
+    margin: auto;
+    // width: 50rem;
+    width: 97%;
+
+    @media screen and (max-width: rem(650)) {
+        width: 100%;
+    }
+}
+
+
+// @media screen and (max-height: 400px) {
+//     .footer{
+//       position: inherit; 
+//     }
+// }
+
+
+.menuTextFont {
+    cursor: pointer;
+    font-size: $h3;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    color: $gray-800;
+    // transition: var(--transition);
+}
+
+.flexJustify {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-content: center;
+}
+
+.flexAlignHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+// Horizontal line
+.horizontal-bottom-line {
+    border-bottom: rem(0.5) solid #dadce0;
+}
+
+.horizontal-top-line {
+    border-top: rem(0.5) solid #dadce0;
+}
+
+// page container 
+.page-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.nav-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.nav-container-right {
+    // width: 100%;
+    // margin-left: auto;
+    margin-right: auto;
+    // left: 0; 
+    right: 0;
+}
+
+.nav-container-right-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.nav-container-left {
+    // width: 100%;
+    margin-left: auto;
+    // margin-right: auto;
+    left: 0;
+    // right: 0; 
+}
+
+
+@media screen and (max-width: rem(650)) {
+    .page-container {
+        // padding:1rem  2rem;
+        width: 95%;
+    }
+}
+
+//image page container 
+.image-page-container {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+
+.flex-row {
+    display: flex;
+}
+
+.box-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.justified-content{
+    justify-content: center;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.box-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.container_fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: rem(20);
+    padding-right: rem(20);
+}
+
+.main-title {
+    font-family: $font-body;
+    font-weight: $h1-weight;
+    font-size: $h1-size;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(10);
+    line-height: rem(24);
+    /* identical to box height, or 240% */
+    letter-spacing: 0.04em;
+}
+
+.title-unbold {
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: rem(24);
+    /* identical to box height, or 240% */
+    letter-spacing: 0.04em;
+}
+
+.float-right {
+    float: right;
+}
+
+//Button Global
+
+.medium-button {
+    box-sizing: border-box;
+    min-width: rem(100);
+    max-width: rem(150);
+    background: #FFFFFF;
+    border: rem(0.8) solid #686868;
+    border-radius: rem(3);
+    padding: rem(10);
+
+    /**
+  * font styles
+  */
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    //line-height: 15px;
+    color: white;
+    background: #A14807;
+
+    //  margin-top: -6px;
+}
+
+
+
+/* Display Red Error line  on Field */
+.invalid {
+    border: rem(1) solid red;
+}
+
+.field-invalid {
+    color: red;
+    font-size: $label-font-size;
+    text-align: left;
+    // padding-top: rem(10);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(158, 157, 157, 0.5);
+    z-index:2;
+    top: 0;
+    right: 0;
+}
+
+.message-label-items {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+
+    // Mobile
+    touch-action: pan-y; // to allow vertical scrolling touch gestures.
+    -webkit-overflow-scrolling: touch; // to enable momentum based scrolling on iOS.
+
+    // Desktop
+    -ms-overflow-style: none;
+    overscroll-behavior-y: contain; // to prevent the scroll position from skipping around.
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ddd;
+}
+
+.message-label-items:hover {
+    overflow-y: scroll;
+}
+
+.message-label-items:active::-webkit-scrollbar-thumb,
+.message-label-items:focus::-webkit-scrollbar-thumb,
+.message-label-items:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.message-label-items::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    visibility: hidden;
+
+}
+
+.message-label-items::-webkit-scrollbar {
+    width: rem(5);
+    height: rem(4);
+}
+
+.scrollable-message-list {
+    // padding-right: 2px;
+    overflow-y: hidden;
+    /* Hide the scrollbar */
+    border-right: $thin-line-color solid rem(1);
+    border-bottom: white solid rem(1);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    /* Add animation to the flex property */
+
+    width: 100%;
+    margin: 0 auto;
+    // position: fixed;
+    // bottom: 0;
+    height: calc(100% - rem(55));
+}
+
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+    .bottomMenuActive {
+        @media screen and (max-width: 766px) {
+                color: var(--text-primary);
+    font-weight: 600;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      right: 0;
+      top: -0.75rem;
+      height: 3px;
+      width: 4rem;
+      background-color: var(--theme-primary-color, var(--primary-color));
+    }
+
+        }
+  }

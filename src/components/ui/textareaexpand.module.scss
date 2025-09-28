@@ -1,0 +1,11 @@
+@import '@/styles/helpers';
+
+.TextAreaExpand {
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: $font-body;
+
+}

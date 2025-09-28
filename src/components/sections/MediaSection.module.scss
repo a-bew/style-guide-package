@@ -1,0 +1,446 @@
+@import '@/globalStyles/vars';
+@import '@/globalStyles/colors';
+@import '@/globalStyles/typography';
+@import '@/globalStyles/index.global.scss';
+
+.mediaSection {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $gray-200;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle {
+  @extend %heading-1;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionDescription {
+  @extend %body1-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.componentsGrid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.componentCard {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.componentHeader {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid $gray-100;
+}
+
+.componentTitle {
+  @extend %heading-3;
+  color: $gray-900;
+  margin: 0 0 0.5rem 0;
+}
+
+.componentDescription {
+  @extend %body2-r;
+  color: $gray-600;
+  margin: 0;
+}
+
+.componentDemo {
+  padding: 2rem 1.5rem;
+  background: $gray-100;
+  min-height: 120px;
+}
+
+.demoGroup {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.demoTitle {
+  @extend %body2-sb;
+  color: $gray-700;
+  margin: 0 0 1rem 0;
+}
+
+// Image Components
+.imageGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.imageWrapper {
+  text-align: center;
+  
+  .imageLabel {
+    @extend %micro-r;
+    color: $gray-600;
+    margin: 0.5rem 0 0 0;
+    text-transform: capitalize;
+  }
+}
+
+// Spinner Components
+.spinnerRow {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.spinnerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  min-width: 100px;
+
+  span {
+    @extend %micro-sb;
+    color: $gray-700;
+  }
+}
+
+// Tag Components
+.tagGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+// Rating Components
+.ratingGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.ratingItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+
+  span {
+    @extend %micro-r;
+    color: $gray-600;
+    text-align: center;
+  }
+}
+
+// Avatar Components
+.avatarGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.avatarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+
+  span {
+    @extend %micro-r;
+    color: $gray-700;
+    text-align: center;
+
+    &.online {
+      color: $success;
+      font-weight: 600;
+    }
+
+    &.offline {
+      color: $gray-500;
+    }
+  }
+}
+
+// Tooltip Components
+.tooltipGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.tooltipItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+
+  span {
+    @extend %micro-sb;
+    color: $gray-700;
+    text-align: center;
+  }
+}
+
+// Utility Components
+.utilityDemo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  position: relative;
+  min-height: 100px;
+}
+
+.demoButton {
+  padding: 0.75rem 1.5rem;
+  background: $primary-10;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: darken($primary-10, 10%);
+  }
+}
+
+.checkmarkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+// Separator Components
+.separatorDemo {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.separatorExample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+
+  span {
+    @extend %body2-r;
+    color: $gray-700;
+  }
+}
+
+.separatorVertical {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  justify-content: center;
+
+  span {
+    @extend %body2-r;
+    color: $gray-700;
+  }
+}
+
+// Feedback Components
+.feedbackDemo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.errorContainer {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.componentCode {
+  border-top: 1px solid $gray-200;
+  background: $gray-100;
+}
+
+.codeToggle {
+  @extend %body2-sb;
+  color: $gray-700;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-10;
+  }
+
+  &::marker {
+    color: $primary-10;
+  }
+}
+
+.codeBlock {
+  background: $gray-900;
+  color: $gray-100;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-top: 1px solid $gray-200;
+
+  code {
+    color: inherit;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// Usage Guidelines
+.usageGuidelines {
+  background: white;
+  border: 1px solid $gray-200;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.guidelinesTitle {
+  @extend %heading-3;
+  color: $gray-900;
+  margin: 0 0 1.5rem 0;
+}
+
+.guidelinesList {
+  display: grid;
+  gap: 1.5rem;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.guideline {
+  padding: 1rem;
+  border-left: 3px solid $primary-10;
+  background: rgba($primary-10, 0.05);
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  h4 {
+    @extend %secondary-heading;
+    color: $gray-900;
+    margin: 0 0 0.5rem 0;
+  }
+
+  p {
+    @extend %body2-r;
+    color: $gray-600;
+    margin: 0;
+  }
+}
+
+// Responsive Design
+@media (max-width: $tablet) {
+  .mediaSection {
+    padding: 1rem;
+  }
+  
+  .componentDemo {
+    padding: 1.5rem 1rem;
+  }
+  
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .spinnerRow {
+    gap: 1rem;
+  }
+  
+  .ratingGrid, .avatarGrid, .tooltipGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .separatorDemo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .codeBlock {
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .usageGuidelines {
+    padding: 1.5rem;
+  }
+  
+  .guidelinesList {
+    grid-template-columns: 1fr;
+  }
+}

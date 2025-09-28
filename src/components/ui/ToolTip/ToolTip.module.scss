@@ -1,0 +1,196 @@
+// ToolTip.module.scss
+.tooltip {
+    &-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+  
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0px;
+      
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    &-content {
+      position: absolute;
+      z-index: 1000;
+      min-width: 120px;
+      max-width: 250px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: var(--background, #333);
+      color: white;
+    //   font-size: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+      
+      &.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      // Positioning variations
+      &.top {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 8px;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: var(--background, #333) transparent transparent transparent;
+        }
+      }
+      
+      &.right {
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 8px;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 100%;
+          margin-top: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent #333 transparent transparent;
+        }
+      }
+      
+      &.bottom {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 8px;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent transparent #333 transparent;
+        }
+      }
+      
+      &.left {
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 8px;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          margin-top: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent transparent transparent #333;
+        }
+      }
+    }
+  }
+  
+  // Optional themes
+  .tooltip-theme {
+    &-info {
+      background-color: #3498db;
+      
+      &:after {
+        border-color: #3498db transparent transparent transparent !important;
+      }
+      
+      &.right:after {
+        border-color: transparent #3498db transparent transparent !important;
+      }
+      
+      &.bottom:after {
+        border-color: transparent transparent #3498db transparent !important;
+      }
+      
+      &.left:after {
+        border-color: transparent transparent transparent #3498db !important;
+      }
+    }
+    
+    &-success {
+      background-color: #2ecc71;
+      
+      &:after {
+        border-color: #2ecc71 transparent transparent transparent !important;
+      }
+      
+      &.right:after {
+        border-color: transparent #2ecc71 transparent transparent !important;
+      }
+      
+      &.bottom:after {
+        border-color: transparent transparent #2ecc71 transparent !important;
+      }
+      
+      &.left:after {
+        border-color: transparent transparent transparent #2ecc71 !important;
+      }
+    }
+    
+    &-warning {
+      background-color: #f39c12;
+      
+      &:after {
+        border-color: #f39c12 transparent transparent transparent !important;
+      }
+      
+      &.right:after {
+        border-color: transparent #f39c12 transparent transparent !important;
+      }
+      
+      &.bottom:after {
+        border-color: transparent transparent #f39c12 transparent !important;
+      }
+      
+      &.left:after {
+        border-color: transparent transparent transparent #f39c12 !important;
+      }
+    }
+    
+    &-error {
+      background-color: #e74c3c;
+      
+      &:after {
+        border-color: #e74c3c transparent transparent transparent !important;
+      }
+      
+      &.right:after {
+        border-color: transparent #e74c3c transparent transparent !important;
+      }
+      
+      &.bottom:after {
+        border-color: transparent transparent #e74c3c transparent !important;
+      }
+      
+      &.left:after {
+        border-color: transparent transparent transparent #e74c3c !important;
+      }
+    }
+  }
